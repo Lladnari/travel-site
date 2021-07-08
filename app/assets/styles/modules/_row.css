@@ -1,0 +1,56 @@
+/* _row.css */
+
+.row {
+
+    /* background-color: purple; /* test */
+    @mixin clearFix;
+
+    &__medium-4 { /* center image if no columns. (not working) */
+        /* background-color: red; /* /* Testing. */
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        /* width: 70%; /* */
+        padding: 0;
+    }
+
+    &__b-margin-until-medium { /* for tiny and small screens. */
+        margin-bottom: 1rem;
+    }
+
+    @mixin atMedium {
+
+        &__b-margin-until-medium { /* Undo setting. */
+            margin-bottom: 0;
+        }
+           
+        &__medium-4 {
+            /* background-color: yellow; /* Testing. */
+            float: left;
+            width: 33%; /* (32%) */
+        }
+
+        &__medium-4--larger {
+            width: 37%;
+        }
+
+        &__medium-8 {
+            /* background-color: green; /* Testing. */
+            float: left;
+            width: 67%; /* (63%) */
+        }
+
+        &__medium-8--smaller {
+            width: 63%;
+        }
+    }
+
+    &--gutters {
+        margin-right: -65px; /* (5%) eliminate the last padding-right by extending the 'box' to the right. */
+    }
+
+    &--gutters > div {
+        padding-right: 65px;
+    }
+
+}

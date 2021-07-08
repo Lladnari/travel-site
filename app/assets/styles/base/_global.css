@@ -1,0 +1,19 @@
+/* _global.css, partial file. */
+
+body {
+    font-family: 'Roboto', san-serif;
+    color: $darkGrey;
+}
+
+img {   /* apply to all images. */
+    max-width: 100%;    /* prevent images from extending beyond browser width to reduce horizontal scroll bar. */
+    height: auto;
+}
+
+* { /* applies to all elements. */
+    box-sizing: border-box; /* delete the padding before calculating the width %. */
+}
+
+a {
+    color: $mainOrange;
+}
