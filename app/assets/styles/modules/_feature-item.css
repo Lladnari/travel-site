@@ -1,0 +1,35 @@
+/* _feature-item.css */
+
+.feature-item {
+    position: relative;
+    padding-bottom: 2.5rem;
+
+    @mixin atSmall {
+        padding-left: 94px;
+    }
+
+    &__icon {
+        display: block;
+        margin: 0 auto;
+        @mixin atSmall {
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    &__title { /* Default of Tiny. */
+        background-color: red; /* Testing. */
+        color: red;
+        font-size: 1.6rem;
+        font-weight: 300;
+        margin-bottom: 0.8rem;
+        margin-top: 0.7rem;
+        text-align: center;
+
+        @mixin atSmall { /* Small or greater. */
+            font-size: 1.875rem;
+            margin-top: 1rem;
+            text-align: left;
+        }
+    }
+}

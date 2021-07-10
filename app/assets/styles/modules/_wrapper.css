@@ -1,0 +1,31 @@
+/* _wrapper.css */
+
+.wrapper {
+    /* background-color: green; /* Testing. */
+    border: 2px solid $black; /* Testing. */
+    max-width: 1236px;  /* 1200+borders+padding due to border-box. So verbiage is not too wide and still has 1200px for displaying. */
+    margin-left: auto;  /* Center text. */
+    margin-right: auto; /* Center text. */
+    padding-left: 18px;
+    padding-right: 18px;
+    overflow: hidden;   /* Truncate the negative right margin needed for columns in _row.css. */
+
+    &--medium {
+        max-width: 980px;
+    }
+
+
+    &--margin-b, &--b-margin {
+        margin-bottom: 1rem; /* Tiny */
+
+        @mixin atSmall {
+            margin-bottom: 3.875rem; /* 62/16 */
+        }
+    }
+
+    .wrapper { /* remove nested wrapper padding. */
+        /* border: 2px solid $orangeMain; /* Testing. */
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

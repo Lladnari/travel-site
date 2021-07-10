@@ -1,0 +1,64 @@
+/* _row.css */
+
+.row {
+
+    /* background-color: purple; /* test */
+    @mixin clearFix;
+
+    &__b-margin-until-medium { /* for tiny and small screens. */
+        margin-bottom: 1rem;
+    }
+
+    @mixin atMedium {
+
+        &__b-margin-until-medium { /* Undo Tiny setting. */
+            margin-bottom: 0;
+        }
+           
+        &__medium-4, &__medium-third {
+            /* background-color: yellow; /* Testing. */
+            display: block;
+            float: left;
+            width: 33%; /* (32%) */
+        }
+
+        &__medium-third--larger, &__medium-4--larger {
+            width: 37%;
+        }
+
+        &__medium-6, &__medium-half {
+            /* background-color: yellow; /* Testing. */
+            display: block;
+            float: left;
+            width: 50%; /* (47.5%) */
+        }
+
+        &__medium-8, &__medium-thirdx2 {
+            /* background-color: green; /* Testing. */
+            display: block;
+            float: left;
+            width: 67%; /* (63%) */
+        }
+
+        &__medium-thirdx2--smaller, &__medium-8--smaller {
+            width: 63%;
+        }
+    }
+
+    &--gutters {
+        margin-right: -65px; /* (5%) eliminate the last padding-right by extending the 'box' to the right. */
+    }
+
+    &--gutters > div {
+        padding-right: 65px;
+    }
+
+    &--gutters-large {
+        margin-right: -100px; /* (10%) eliminate the last padding-right by extending the 'box' to the right. */
+    }
+
+    &--gutters-large > div {
+        padding-right: 100px;
+    }
+
+}

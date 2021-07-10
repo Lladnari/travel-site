@@ -1,0 +1,33 @@
+/* _global.css */
+
+* { /* applies to all elements. */
+    box-sizing: border-box; /* the borders and padding are withing the element's spacing and not added to them. */
+}
+
+body {
+    font-family: 'Roboto', san-serif;
+    color: $grayDark;
+}
+
+a {
+    color: $orangeMain;
+}
+
+img {   /* apply to all images. */
+    max-width: 100%;    /* prevent images from extending beyond browser width to reduce horizontal scroll bar. */
+    height: auto;
+}
+
+/* Classes in alphabetical order. */
+
+.block { /* remove any gap, text padding, between an image and its border, from around the image. */
+    display: block;
+}
+
+.block-inline {
+    display: inline-block;
+}
+
+.inline {
+    display: inline;
+}

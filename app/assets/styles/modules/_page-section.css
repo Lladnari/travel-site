@@ -1,0 +1,16 @@
+/* _page-section.css */
+
+.page-section { /* For each section, add top and bottom padding. */
+
+    padding: 1.2rem 0;
+
+    @mixin atMedium {
+        padding: 4.5rem 0; /* top/bottom no side padding. */
+    }
+
+    &--blue {
+        background-color: $blueMain;
+        color: $white;
+    }
+
+}

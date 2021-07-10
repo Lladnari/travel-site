@@ -1,0 +1,30 @@
+/* _section-title.css */
+
+.section-title {
+    font-size: 2.55rem;
+    font-weight: 300;
+    text-align: center;
+
+    @mixin atSmall {
+        font-size: 3.75rem; /* 60/16 */
+    }
+
+    &__icon {
+        display: block; /* force text to new line. */
+        margin-bottom: 0.6rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        @mixin atSmall {
+            display: inline-block; /* keep on same line as text. */
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0.5rem;
+        }
+    }
+
+    strong {
+        font-weight: 500;
+    }
+
+}

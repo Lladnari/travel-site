@@ -1,0 +1,18 @@
+/* _variables.css, partial file */
+
+/* Colors, e.g., $colorModifier. */
+$black: #000;
+$blueMain: #2F5572;
+$grayDark: #333;
+$green: green;
+$orangeMain: #D59541;
+$purple: purple;
+$red: red;
+$white: #FFF;
+$yellow: yellow;
+
+/* retired values.  Delete when all references have been removed. */
+$darkGrey: $grayDark;
+$greyDark: $grayDark;
+$mainBlue: $blueMain;
+$mainOrange: $orangeMain;
