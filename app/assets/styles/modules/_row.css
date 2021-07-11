@@ -15,7 +15,7 @@
             margin-bottom: 0;
         }
            
-        &__medium-4, &__medium-third {
+        &__medium-third, &__medium-4 {
             /* background-color: yellow; /* Testing. */
             display: block;
             float: left;
@@ -26,14 +26,14 @@
             width: 37%;
         }
 
-        &__medium-6, &__medium-half {
+        &__medium-half, &__medium-6 {
             /* background-color: yellow; /* Testing. */
             display: block;
             float: left;
             width: 50%; /* (47.5%) */
         }
 
-        &__medium-8, &__medium-thirdx2 {
+        &__medium-thirdx2, &__medium-8 {
             /* background-color: green; /* Testing. */
             display: block;
             float: left;

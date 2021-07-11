@@ -1,7 +1,7 @@
 /* _feature-item.css */
 
 .feature-item {
-    position: relative;
+    position: relative; /* for icon position: absolute. */
     padding-bottom: 2.5rem;
 
     @mixin atSmall {
@@ -18,8 +18,7 @@
     }
 
     &__title { /* Default of Tiny. */
-        background-color: red; /* Testing. */
-        color: red;
+        /* background-color: red; /* Testing. */
         font-size: 1.6rem;
         font-weight: 300;
         margin-bottom: 0.8rem;
@@ -27,7 +26,7 @@
         text-align: center;
 
         @mixin atSmall { /* Small or greater. */
-            font-size: 1.875rem;
+            font-size: 1.875rem; /* 30/16 */
             margin-top: 1rem;
             text-align: left;
         }
