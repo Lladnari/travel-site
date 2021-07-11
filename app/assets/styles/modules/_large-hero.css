@@ -46,8 +46,7 @@
         font-weight: 100; /* thin */
         text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
         max-width: 30rem; /* 480/16 */
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
 
         @mixin atSmall {
             font-size: 1.875rem; /* 30/16 */

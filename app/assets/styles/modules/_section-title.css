@@ -1,6 +1,6 @@
 /* _section-title.css */
 
-.section-title {
+.section-title { /* Tiny. */
     font-size: 2.55rem;
     font-weight: 300;
     text-align: center;
@@ -12,12 +12,11 @@
     &__icon {
         display: block; /* force text to new line. */
         margin-bottom: 0.6rem;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
 
         @mixin atSmall {
             display: inline-block; /* keep on same line as text. */
-            margin-bottom: 0;
+            margin-bottom: 0; /* reset not needed as text is always taller than icon. */
             margin-left: 0;
             margin-right: 0.5rem;
         }
