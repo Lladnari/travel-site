@@ -39,7 +39,7 @@
         max-width: 500px;
     }
 
-    &--no-t-margin {
+    &--no-margin-t, &--no-t-margin {
         margin-top: 0;
     }
 

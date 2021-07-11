@@ -5,13 +5,13 @@
     /* background-color: purple; /* test */
     @mixin clearFix;
 
-    &__b-margin-until-medium { /* for tiny and small screens. */
+    &_margin-b-until-medium, &__b-margin-until-medium { /* for tiny and small screens. */
         margin-bottom: 1rem;
     }
 
     @mixin atMedium {
 
-        &__b-margin-until-medium { /* Undo Tiny setting. */
+        &_margin-b-until-medium, &__b-margin-until-medium { /* Undo Tiny setting. */
             margin-bottom: 0;
         }
            
