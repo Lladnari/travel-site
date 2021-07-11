@@ -4,10 +4,8 @@
     /* background-color: green; /* Testing. */
     border: 2px solid $black; /* Testing. */
     max-width: 1236px;  /* 1200+borders+padding due to border-box. So verbiage is not too wide and still has 1200px for displaying. */
-    margin-left: auto;  /* Center text. */
-    margin-right: auto; /* Center text. */
-    padding-left: 18px;
-    padding-right: 18px;
+    margin: 0 auto;     /* Center text horizontally. */
+    padding: 0 18px;    /* left and right padding. */
     overflow: hidden;   /* Truncate the negative right margin needed for columns in _row.css. */
 
     &--medium {

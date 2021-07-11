@@ -12,8 +12,7 @@
     &__icon {
         display: block; /* force text to new line. */
         margin-bottom: 0.6rem;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
 
         @mixin atSmall {
             display: inline-block; /* keep on same line as text. */
