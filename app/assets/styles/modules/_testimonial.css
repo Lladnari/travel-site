@@ -2,7 +2,17 @@
 
 .testimonial {
    background: rgba(255, 255, 255, 0.8);
-   padding: 0 1.8rem 1px 1.8rem;  /* 29/16.  1px of padding allows bottom margin to display. */
+   padding: 0 18px 1px 18px;  /* Match other padding. */
+   margin-bottom: 98px; /* 80+18 due to picture being relitive -80px. */
+
+   @mixin atMedium {
+      margin-bottom: 0;
+      padding: 0 1.8rem 1px 1.8rem;  /* 29/16.  1px of padding allows bottom margin to display. */
+   }
+
+   &--last {
+      margin-bottom: 0;
+   }
 
    &__photo {
       border: 6px solid rgba(255, 255, 255, 0.8);
@@ -25,8 +35,8 @@
 
    &__subtitle {
       color: $orangeMain;
-      font-weight: 400;
       font-size: 0.9375rem; /* 15/16 */
+      font-weight: 400;
       text-align: center;
       margin: 0.25rem 0 1rem 0;
    }

@@ -5,8 +5,9 @@
     border: 2px solid $black; /* Testing. */
     max-width: 1236px;  /* 1200+borders+padding due to border-box. So verbiage is not too wide and still has 1200px for displaying. */
     margin: 0 auto;     /* Center text horizontally. */
-    padding: 0 18px;    /* left and right padding. */
     overflow: hidden;   /* Truncate the negative right margin needed for columns in _row.css. */
+    padding-left: 18px;
+    padding-right: 18px;
 
     &--medium {
         max-width: 980px;
@@ -18,6 +19,16 @@
 
         @mixin atSmall {
             margin-bottom: 3.875rem; /* 62/16 */
+        }
+    }
+
+    &--no-padding-until-medium {
+        padding-left: 0;
+        padding-right: 0;
+
+        @mixin atMedium {
+            padding-left: 18px;
+            padding-right: 18px;
         }
     }
 

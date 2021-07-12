@@ -9,6 +9,10 @@
         margin-bottom: 1rem;
     }
 
+    &--padding-top {
+        padding-top: 80px;  /* picture height of 160/2 */
+    }
+
     @mixin atMedium {
 
         &_margin-b-until-medium, &__b-margin-until-medium { /* Undo Tiny setting. */
@@ -59,6 +63,27 @@
 
     &--gutters-large > div {
         padding-right: 100px;
+    }
+
+    &--gutters-small {
+        margin-right: -45px; /* (10%) eliminate the last padding-right by extending the 'box' to the right. */
+    }
+
+    &--gutters-small > div {
+        padding-right: 45px;
+    }
+
+    /* Begin equal height rules. */
+
+    &--medium-equal-height {
+        @mixin atMedium {
+            display: flex;
+        }
+
+        & > div { /* select columns. */
+            float: none;
+            display: flex;
+        }
     }
 
 }
