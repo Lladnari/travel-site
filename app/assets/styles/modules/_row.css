@@ -13,7 +13,7 @@
         padding-top: 80px;  /* picture height of 160/2 */
     }
 
-    @mixin atMedium {
+    @mixin atMedium { /* not used yet. */
 
         &_margin-b-until-medium, &__b-margin-until-medium { /* Undo Tiny setting. */
             margin-bottom: 0;
@@ -49,6 +49,42 @@
         }
     }
 
+    @mixin atLarge {
+
+        &_margin-b-until-large, &__b-margin-until-large { /* Undo Tiny setting. */
+            margin-bottom: 0;
+        }
+           
+        &__large-third {
+            /* background-color: yellow; /* Testing. */
+            display: block;
+            float: left;
+            width: 33%; /* (32%) */
+        }
+
+        &__large-third--larger {
+            width: 37%;
+        }
+
+        &__large-half {
+            /* background-color: yellow; /* Testing. */
+            display: block;
+            float: left;
+            width: 50%; /* (47.5%) */
+        }
+
+        &__large-thirdx2 {
+            /* background-color: green; /* Testing. */
+            display: block;
+            float: left;
+            width: 67%; /* (63%) */
+        }
+
+        &__large-thirdx2--smaller {
+            width: 63%;
+        }
+    }
+
     &--gutters {
         margin-right: -65px; /* (5%) eliminate the last padding-right by extending the 'box' to the right. */
     }
@@ -75,8 +111,19 @@
 
     /* Begin equal height rules. */
 
-    &--medium-equal-height {
+    &--medium-equal-height { /* not used yet. */
         @mixin atMedium {
+            display: flex;
+        }
+
+        & > div { /* select columns. */
+            float: none;
+            display: flex;
+        }
+    }
+
+    &--large-equal-height {
+        @mixin atLarge {
             display: flex;
         }
 

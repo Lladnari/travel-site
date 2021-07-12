@@ -5,7 +5,7 @@
    padding: 0 18px 1px 18px;  /* Match other padding. */
    margin-bottom: 98px; /* 80+18 due to picture being relitive -80px. */
 
-   @mixin atMedium {
+   @mixin atLarge {
       margin-bottom: 0;
       padding: 0 1.8rem 1px 1.8rem;  /* 29/16.  1px of padding allows bottom margin to display. */
    }

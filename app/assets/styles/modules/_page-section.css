@@ -8,10 +8,19 @@
         padding: 4.5rem 0; /* top/bottom no side padding. */
     }
 
-    &--no-padding-b-until-medium {
+    &--no-padding-b-until-medium { /* not used yet. */
         padding-bottom: 0;
 
         @mixin atMedium {
+            padding-bottom: 4.5rem;
+        }
+
+    }
+
+    &--no-padding-b-until-large {
+        padding-bottom: 0;
+
+        @mixin atLarge {
             padding-bottom: 4.5rem;
         }
 
@@ -25,7 +34,7 @@
     &--testimonials {
         background-color: $blueLight;
 
-        @mixin atMedium {
+        @mixin atLarge {
             background: url('./assets/images/testimonials-bg.jpg') top center no-repeat;
             background-size: cover;
         }
