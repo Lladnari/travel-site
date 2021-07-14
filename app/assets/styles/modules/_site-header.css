@@ -1,0 +1,21 @@
+/* _site-header.css */
+
+.site-header {
+   background-color: rgba(47, 85, 114, 0.3); /* ($blueMain, 0.3); /* Not yet fixed. uses postcss-hexrgba. */
+   padding: 10px 0;
+   position: absolute;  /* remove from page flow. */
+   width: 100%;
+   z-index: 2;          /* Place on top of image. */
+
+   &__btn-container {
+      float: right;
+   }
+
+   &__logo {
+      position:absolute; /* remove from header to allow background to be menu height. */
+      background-color: $blueMain;
+      padding: 25px 36px;
+      top: 0;  /* ignore padding. */
+   }
+
+}
