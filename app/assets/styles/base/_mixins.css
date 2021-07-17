@@ -18,6 +18,7 @@
     }
 }
 
+/* no longer needed because no more floats. */
 @define-mixin clearFix {
     &::after { /* clear at end to allow div to know its height. */
         content: "";

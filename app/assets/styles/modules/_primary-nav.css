@@ -2,27 +2,59 @@
 
 .primary-nav {
 
-   &--pull-right {
-      float: right;
+   padding-top: 10px;
+
+   @mixin atMedium {
+      padding-top: 0;
    }
+
+   /* replace with flexbox. */
+   /* 
+   &--pull-right {
+      @mixin atMedium {
+         float: right;
+      }
+   } /**/
 
    ul {
       margin: 0;
       padding: 0;
-      @mixin clearFix;
+      /* @mixin clearFix; /* Replace with flexbox. */
    }
 
    li {
-      float: left;
+      display: inline-block;
       list-style: none;
-      padding-right: 1.25em /* 20px; /* 20/16 */
+      padding-right: 0.4em; /* 7px */
+
+      @mixin atMedium {
+         /* display: block; /* Replace with flexbox. */
+         /* float: left; /* Replace with flexbox. */
+         padding-right: 1.25em; /* 20px; /* 20/16 */
+      }
+
+   }
+
+   li:last-child { /* Remove right padding for small screens. */
+      padding-right: 0;
+      @mixin atMedium {
+         padding-right: 1.25em;
+      }
    }
 
    a {
       color: $white;
       display: block;
       font-weight: 300;
-      padding: 12px 0;
+      padding: 5px 8px;
       text-decoration: none;
+      font-size: 0.8rem;
+      background-color: rgba(47, 85, 114, 0.5);
+
+      @mixin atMedium {
+         font-size: 1rem;
+         padding: 12px 0;  /* vertically center links. */
+         background-color: transparent;
+      }
    }
 }
