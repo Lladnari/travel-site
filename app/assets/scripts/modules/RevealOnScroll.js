@@ -9,6 +9,7 @@ class RevealOnScroll {
       this.thresholdPercent = iThresholdPercent;
       this.iBrowserHeight = window.innerHeight;
       this.scrollThrottle = throttle(this.calcCaller, 200).bind(this); // Execute code a maximum of 5x per second.
+      this.iDebug = 5;
 
       this.hideInitially();
       this.events();
@@ -17,14 +18,14 @@ class RevealOnScroll {
    events() {
       window.addEventListener("scroll", this.scrollThrottle);
       window.addEventListener("resize", debounce( () => {
-         console.log("Resize just ran.");
+         if (this.iDebug > 8) { console.log("Resize just ran."); }
          this.iBrowserHeight = window.innerHeight; // Update value...
       }, 333)  // after waiting 1/3 second for resizing to finish.
       );
    }
 
    calcCaller() {
-      console.log("function ran")
+      if (this.iDebug > 8) { console.log("function ran"); }
       this.itemsToReveal.forEach(el => {
          if (el.isRevealed == false) { // Only test if elements are not visible.
             this.calculateIfScrolledTo(el);
@@ -36,7 +37,7 @@ class RevealOnScroll {
       let iWindowBottom = window.scrollY + this.iBrowserHeight;
       if (iWindowBottom > el.offsetTop) {
          // Intersection Observer uses less computing resources.
-         console.log("element was calculated");
+         if (this.iDebug > 8) { console.log("element was calculated"); }
          let iDistanceFromScreenTop = el.getBoundingClientRect().top
          let scrollPercent = (iDistanceFromScreenTop / this.iBrowserHeight) * 100
          if (scrollPercent < this.thresholdPercent) {

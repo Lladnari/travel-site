@@ -55,6 +55,11 @@
          font-size: 1rem;
          padding: 12px 0;  /* vertically center links. */
          background-color: transparent;
+
+         &.is-current-link {
+            color: $orangeLight;
+         }
       }
    }
+
 }

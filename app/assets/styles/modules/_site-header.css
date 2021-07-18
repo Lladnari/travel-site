@@ -13,6 +13,11 @@
 
    @mixin atMedium {
       background-color: rgba(47, 85, 114, 0.3); /* ($blueMain, 0.3); /* Not yet fixed. uses postcss-hexrgba. */
+      position: fixed; /* Keep header at top during scrolling. */
+
+      &--dark {
+         background-color: rgba(23, 51, 72, 0.85);
+      }
    }
 
    &__btn-container {
@@ -26,14 +31,20 @@
       background-color: $blueMain;
       left: 50%;                    /* Center Logo. */
       padding: 13px 29px;
-      position:absolute;            /* remove from header to allow background to be menu height. */
+      position: absolute;           /* remove from header to allow background to be menu height. */
       top: 0;                       /* ignore padding. */
       transform: translateX(-50%);  /* Center Logo. */
+      transform-origin: 0 0;  /* Required due to scaling. */
+      transition: all 0.5s ease-out;
 
       @mixin atMedium {
          left: auto;
          padding: 25px 36px;
-         transform: translateX(0);
+         transform: translateX(0); /* Move to top. */
+
+         .site-header--dark & {
+            transform: scale(0.56); /* Shrink to fit with header bar. */
+         }
       }
 
    }

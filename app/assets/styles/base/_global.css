@@ -4,6 +4,10 @@
     box-sizing: border-box; /* the borders and padding are withing the element's spacing and not added to them. */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto', san-serif;
     color: $grayDark;
