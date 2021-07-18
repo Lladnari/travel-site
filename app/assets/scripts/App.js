@@ -3,6 +3,7 @@
 let iDebug = 0;
 
 import '../styles/styles.css';
+import 'lazysizes';
 import MobileMenu from './modules/MobileMenu.js';
 import RevealOnScroll from './modules/RevealOnScroll.js';
 import StickyHeader from './modules/StickyHeader.js';
@@ -10,8 +11,8 @@ import StickyHeader from './modules/StickyHeader.js';
 // import Modal from './modules/Modal.js';
 // new Modal();
 
-let stickyHeader = new StickyHeader();
-let oMobileMenu = new MobileMenu();
+new StickyHeader();
+new MobileMenu();
 new RevealOnScroll(document.querySelectorAll(".feature-item"), 85);
 new RevealOnScroll(document.querySelectorAll(".testimonial"), 75);
 let modal; /* Create undefined global variable to use in functions. */
