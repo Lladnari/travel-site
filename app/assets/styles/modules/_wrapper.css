@@ -13,6 +13,9 @@
         max-width: 980px;
     }
 
+    &--narrow {
+        max-width: 470px;
+    }
 
     &--margin-b, &--b-margin {
         margin-bottom: 1rem; /* Tiny */
