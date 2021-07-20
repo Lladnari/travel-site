@@ -1,6 +1,8 @@
 exports.handler = function(event, context, callback) {
- callback(null, {
-    statusCode: 200,
-    body: "Welcome to the super secret area"
- });
-}
+   // Cloud function for node environment.
+
+   callback(null, {
+      statusCode: 200,
+      body: "Welcome to the super secret area"
+   }); // callback()
+} // exports.handler
