@@ -20,8 +20,8 @@ exports.handler = function(event, context, callback) {
        }); // callback()
    } else {
       callback(null, {
-         statusCode: 401 // Unauthorized.
-//         body: "Welcome to the super secret area"
+         statusCode: 401, // Unauthorized.
+         body: "<h1>Unauthorized</h1>"
       }); // callback()
 
    } // end else(==)

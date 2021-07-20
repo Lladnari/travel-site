@@ -1,0 +1,17 @@
+/* _client-area.css */
+
+.client-area {
+   padding: 30px;
+
+   &__form {
+      display: flex; /* FlexBox. */
+   }
+
+   &__input {
+      flex: 1; /* Take up entire area. */
+   }
+
+   &__error {
+      color: red;
+   }
+}

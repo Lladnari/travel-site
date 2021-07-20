@@ -2,8 +2,9 @@
 
 let iDebug = 0;
 
-import '../styles/styles.css';
 import 'lazysizes';
+import '../styles/styles.css';
+import ClientArea from './modules/ClientArea.js';
 import MobileMenu from './modules/MobileMenu.js';
 import RevealOnScroll from './modules/RevealOnScroll.js';
 import StickyHeader from './modules/StickyHeader.js';
@@ -11,6 +12,7 @@ import StickyHeader from './modules/StickyHeader.js';
 // import Modal from './modules/Modal.js';
 // new Modal();
 
+new ClientArea();
 new StickyHeader();
 new MobileMenu();
 new RevealOnScroll(document.querySelectorAll(".feature-item"), 85);
