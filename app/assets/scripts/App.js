@@ -9,14 +9,23 @@ import MobileMenu from './modules/MobileMenu.js';
 import RevealOnScroll from './modules/RevealOnScroll.js';
 import StickyHeader from './modules/StickyHeader.js';
 
+// React related code goes here.
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+// Import React components that we create.
+import MyAmazingComponent from './modules/MyAmazingComponent.js';
+
+ReactDOM.render(<MyAmazingComponent />, document.querySelector("#my-react-example"));
+
 // import Modal from './modules/Modal.js';
 // new Modal();
 
 new ClientArea();
-new StickyHeader();
 new MobileMenu();
 new RevealOnScroll(document.querySelectorAll(".feature-item"), 85);
 new RevealOnScroll(document.querySelectorAll(".testimonial"), 75);
+new StickyHeader();
 let modal; /* Create undefined global variable to use in functions. */
 
 document.querySelectorAll(".open-modal").forEach(elm => {

@@ -56,7 +56,17 @@ let config = {
     plugins: aHTMLPages,
     module: {
         rules: [
-            cssConfig
+            cssConfig,
+            { // configure js to work with older browsers.
+                test: /\.js$/,
+                exclude: /(node_modules)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-react', '@babel/preset-env']
+                    }
+                }
+            }
         ]
     }
 }
@@ -83,16 +93,7 @@ if (currentTask == "dev") {
 // How name vendors-main.*.js file?
 if (currentTask == "build") {
     config.mode = 'production'
-    config.module.rules.push({ // configure js to work with older browsers.
-        test: /\.js$/,
-        exclude: /(node_modules)/,
-        use: {
-            loader: 'babel-loader',
-            options: {
-                presets: ['@babel/preset-env']
-            }
-        }
-    })
+    //config.module.rules.push()
     cssConfig.use.unshift(MiniCssExtractPlugin.loader)
     config.output = {
         filename: '[name].[chunkhash].js', // Replaced bundled with [name] due to error.  Add a hash # to force reload.
